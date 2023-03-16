@@ -1,0 +1,13 @@
+.dropdown-list label{
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+.dropdown-list select{
+    background-color: white;
+    box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.079);
+    width: 100%;
+    border: none;
+    font-size: 2.5rem;
+    padding: 2.5rem;
+}
