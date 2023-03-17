@@ -6,8 +6,14 @@
 }
 
 :root{
+  /*ACCESSIBILITY*/
   font-size: 62.5%;
+
+  /*COLORS*/
+  --banner-color: #F8BA32;
+  --hover-button: #a52a2a;
 }
+
 
 body {
   margin: 0;

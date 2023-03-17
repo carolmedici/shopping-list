@@ -1,20 +1,19 @@
 import './TextField.css'
 
 const TextField = (props) =>{
+
+const whenTyping = (event) =>{
+    props.toChange(event.target.value)
+}
+
 return(
- 
         <div className="text-field">
             <label>
                 {props.label}
             </label>
-            <input placeholder={props.placeholder}/>
-        
-        
+            <input value={props.result} onChange={whenTyping} required={props.obligatory} placeholder={props.placeholder}/>
         </div>
-       
-  
-
-) //to return multiple lines
-
+    ) 
 }
+
 export default TextField

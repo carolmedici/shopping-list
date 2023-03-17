@@ -1,10 +1,4 @@
 
-:root{
-    /*COLORS*/
-    --banner-color: #F8BA32;
-}
-
-
 .banner{
     background-color: var(--banner-color);
     text-align: center
