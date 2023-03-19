@@ -1,14 +1,24 @@
+import { useState } from 'react';
 import Banner from './components/Banner';
 import Form from './components/Form';
 
-import { useState } from 'react';
+
 
 
 function App() {
+
+
+  const [itensList, setItensList] = useState([])
+
+  const onItemAdd = (itemList) => {
+    console.log(itemList)
+    setItensList([...itensList, itemList])
+  }
+
   return (
     <div className="App">
       <Banner/>
-      <Form/>
+      <Form forRegisteredItem={itemList => onItemAdd(itemList) }/>
     </div>
   );
 }

@@ -1,10 +1,10 @@
-import "./Form.css";
+import { useState } from "react";
+import Button from "../Button";
 import TextField from "../TextField";
 import DropdownList from "../DropdownList";
-import Button from "../Button";
-import { useState } from "react";
+import "./Form.css";
 
-const Form = () => {
+const Form = (props) => {
 
 const types = [
   'Fruits',
@@ -27,7 +27,11 @@ const [type, setType] = useState ('')
 
 const onSave = (event) =>{
   event.preventDefault() //Don't let the page refresh (default behavior)
-  console.log ('Submited Form => ',item, amount, type)
+ props.forRegisteredItem({
+  item,
+  amount,
+  type
+ })
 }
 
   return (
