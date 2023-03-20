@@ -12,7 +12,28 @@
   /*COLORS*/
   --banner-color: #F8BA32;
   --hover-button: #a52a2a;
-}
+  --fruits-color1: #c946c9;
+  --fruits-color2: #e8c1e8;
+  --vegetables-color1:#6db56f ;
+  --vegetables-color2: #bae0ce;
+  --meat-color1: #d86565 ;
+  --meat-color2: #ecb3b3;
+  --snack-color1: #e7ea1c ;
+  --snack-color2: #efefb0;
+  --beverages-color1: #47c747 ;
+  --beverages-color2: #bee7be ;
+  --frozen-color1: #5272ca;
+  --frozen-color2: #aebfef;
+  --dairy-color1: #c46969 ;
+  --dairy-color2: #e3b9b9;
+  --bakery-color1: #c49b7a;
+  --bakery-color2: #efd3bd;
+  --personal-color1: #6464ca ;
+  --personal-color2: #c4c4fd;
+  --house-color1: #d05cbf ;
+  --house-color2:#dba2d2  ;
+
+ }
 
 
 body {

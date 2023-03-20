@@ -6,18 +6,7 @@ import "./Form.css";
 
 const Form = (props) => {
 
-const types = [
-  'Fruits',
-  'Vegetables',
-  'Meat and Fish',
-  'Snacks',
-  'Beverages',
-  'Frozen',
-  'Dairy and Eggs',
-  'Bakery',
-  'Personal Care',
-  'Household Essencials',
-]
+
 
 
 const [item, setItem] = useState ('')
@@ -55,7 +44,7 @@ const onSave = (event) =>{
         <DropdownList 
         obligatory={true} 
         label="Type" 
-        itens={types}
+        itens={props.types}
         result = {type}
         toChange={result => setType(result)}
         />

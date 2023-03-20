@@ -1,0 +1,12 @@
+.type{
+    text-align: center;
+    padding: 3rem;
+    
+}
+
+.type h3{
+    font-size: 3rem;
+    border-bottom: 0.4rem solid;
+    display: inline-block;
+    padding-bottom: 1rem;
+}
