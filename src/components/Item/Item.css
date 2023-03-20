@@ -1,5 +1,5 @@
 .item{
-    width: 25rem;
+    width: 20rem;
 }
 
 .item .header{
@@ -7,31 +7,25 @@
     border-radius: 1rem 1rem 0 0 ;
 }
 
-.item image{
-    width: 10rem;
-    border-radius: 50%;
-    position: relative;
-    bottom: -5rem;
-}
-
 
 .item .footer{
     background-color: white;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.145);
     border-radius: 0 0 1rem 1rem;
+    margin-bottom: 1rem;
 }
-
-.item .footer h4{
-    color: blue;
+.item h4{
+    color: white;
     font-size: 2rem;
     line-height: 2rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    padding: 1rem 0;
 }
+
 
 .item .footer h5{
     font-size: 2rem;
     line-height: 2rem;
     color: black ;
-    padding: 0 1.5rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
 }

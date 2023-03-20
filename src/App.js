@@ -8,10 +8,10 @@ function App() {
 
   const types = [
     {
-      nameType: "Fruits",
+      nameType: "Fruits" ,
       firstColor: "var(--fruits-color1)",
       secondColor: "var(--fruits-color2)",
-      image: './ItemsImages/fruits.png'
+     
     },
     {
       nameType: "Vegetables",
@@ -77,7 +77,6 @@ function App() {
         nameType={type.nameType} 
         firstColor={type.firstColor} 
         secondColor={type.secondColor}
-        image={type.image}
         itensList={itensList.filter(itemList => itemList.type === type.nameType)}
         /> ) }
       
