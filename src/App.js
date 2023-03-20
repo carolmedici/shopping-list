@@ -4,8 +4,6 @@ import Form from './components/Form';
 import Type from './components/Type';
 
 
-
-
 function App() {
 
   const types = [
@@ -13,6 +11,7 @@ function App() {
       nameType: "Fruits",
       firstColor: "var(--fruits-color1)",
       secondColor: "var(--fruits-color2)",
+      image: './ItemsImages/fruits.png'
     },
     {
       nameType: "Vegetables",
@@ -55,7 +54,7 @@ function App() {
       secondColor: "var(--personal-color2)",
     },
     {
-      nameType: "Household Essencials",
+      nameType: "Household Essentials",
       firstColor: "var(--house-color1)",
       secondColor: "var(--house-color2)",
     },
@@ -73,7 +72,14 @@ function App() {
       <Banner/>
       <Form types={types.map(type => type.nameType)} forRegisteredItem={itemList => onItemAdd(itemList) }/>
 
-      {types.map(type => <Type key={type.nameType} nameType={type.nameType} firstColor={type.firstColor} secondColor={type.secondColor}/> ) }
+      {types.map(type => <Type 
+        key={type.nameType} 
+        nameType={type.nameType} 
+        firstColor={type.firstColor} 
+        secondColor={type.secondColor}
+        image={type.image}
+        itensList={itensList.filter(itemList => itemList.type === type.nameType)}
+        /> ) }
       
       
 

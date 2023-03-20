@@ -9,7 +9,7 @@ const Form = (props) => {
 
 
 
-const [item, setItem] = useState ('')
+const [nameType, setnameType] = useState ('')
 const [amount, setAmount] = useState ('')
 const [type, setType] = useState ('')
 
@@ -17,10 +17,13 @@ const [type, setType] = useState ('')
 const onSave = (event) =>{
   event.preventDefault() //Don't let the page refresh (default behavior)
  props.forRegisteredItem({
-  item,
+  nameType,
   amount,
   type
  })
+ setnameType('')
+ setAmount('')
+ setType('')
 }
 
   return (
@@ -31,8 +34,8 @@ const onSave = (event) =>{
         obligatory={true} 
         label="Item" 
         placeholder="Add item" 
-        result = {item}
-        toChange={result => setItem(result)}
+        result = {nameType}
+        toChange={result => setnameType(result)}
         />
         <TextField 
         obligatory={true} 
