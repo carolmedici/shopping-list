@@ -4,6 +4,7 @@ import Form from './components/Form';
 import Type from './components/Type';
 
 
+
 function App() {
 
   const types = [
@@ -58,32 +59,48 @@ function App() {
       firstColor: "var(--house-color1)",
       secondColor: "var(--house-color2)",
     },
-  ]
+  ];
 
-  const [itensList, setItensList] = useState([])
+  const [itensList, setItensList] = useState([]);
+  const [nextItemId, setNextItemId] = useState(0);
 
   const onItemAdd = (itemList) => {
-    console.log(itemList)
-    setItensList([...itensList, itemList])
-  }
+    const newItem = { ...itemList, id: nextItemId };
+    setItensList([...itensList, newItem]);
+    setNextItemId(nextItemId + 1);
+  };
+
+  const deleteItem = (itemId) => {
+    const newItensList = itensList.filter((itemList) => itemList.id !== itemId);
+    setItensList(newItensList);
+  };
 
   return (
     <div className="App">
-      <Banner/>
-      <Form types={types.map(type => type.nameType)} forRegisteredItem={itemList => onItemAdd(itemList) }/>
+      <Banner />
+      <Form types={types.map((type) => type.nameType)} forRegisteredItem={(itemList) => onItemAdd(itemList)} />
 
-      {types.map(type => <Type 
-        key={type.nameType} 
-        nameType={type.nameType} 
-        firstColor={type.firstColor} 
-        secondColor={type.secondColor}
-        itensList={itensList.filter(itemList => itemList.type === type.nameType)}
-        /> ) }
-      
-      
+      {types.map((type, index) => (
+        <Type
+          key={type.nameType}
+          nameType={type.nameType}
+          firstColor={type.firstColor}
+          secondColor={type.secondColor}
+          itensList={itensList.filter((itemList) => itemList.type === type.nameType)}
+          onDelete={(itemId) => deleteItem(itemId)}
+        /> 
+      ))}
 
+{itensList.map((item) => (
+  <div key={item.id}>
+    <span>{item.name}</span>
+    <button onClick={() => deleteItem(item.id)}></button>
+  </div>
+))}
     </div>
   );
 }
+
+
 
 export default App;

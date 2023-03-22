@@ -29,3 +29,15 @@
     color: black ;
     padding: 1rem 1.5rem 1rem 1.5rem;
 }
+
+.trash-icon{
+    width: 2rem
+    
+}
+
+button{
+    border: none;
+    background-color: transparent;
+      cursor: pointer;
+
+}
