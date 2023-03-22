@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# Shopper List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was made with the objective of starting studies with React. It is a shopping list with the function to add and delete items. Enjoy :)
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Overview
 
-### `npm test`
+### The challenge
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Users should be able to:
 
-### `npm run build`
+- Add items
+- Separate items by categories
+- View items
+- Delete items
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Screenshot
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![](https://github.com/carolmedici/shopping-list2/blob/master/public/images/print.png)
+![](https://github.com/carolmedici/shopping-list2/blob/master/public/images/print2.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Links
 
-### `npm run eject`
+- Solution URL: [https://github.com/carolmedici/shopping-list2](https://github.com/carolmedici/shopping-list2)
+- Live Site URL: [https://shopping-list-ecru.vercel.app/](https://shopping-list-ecru.vercel.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## My process
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Built with
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- CSS 
+- [React](https://reactjs.org/) - JS library
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### What I learned
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In this project I learned how to create components, control inputs using value and onChange, manage the state of a component using useState, work with props that are functions, manipulate and transform arrays of objects, conditional rendering.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Check out some code: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+```css
+.item .footer{
+    background-color: white;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.145);
+    border-radius: 0 0 1rem 1rem;
+    margin-bottom: 1rem;
+}
+.item h4{
+    color: white;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+```
+```js
+const [itensList, setItensList] = useState([]);
+  const [nextItemId, setNextItemId] = useState(0);
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  const onItemAdd = (itemList) => {
+    const newItem = { ...itemList, id: nextItemId };
+    setItensList([...itensList, newItem]);
+    setNextItemId(nextItemId + 1);
+  };
 
-### Making a Progressive Web App
+  const deleteItem = (itemId) => {
+    const newItensList = itensList.filter((itemList) => itemList.id !== itemId);
+    setItensList(newItensList);
+  };
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+### Continued development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+I will continue studying React library
 
-### Deployment
+### Useful resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [React JS](https://legacy.reactjs.org/) - The library contains great documents and tutorials.
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+
+- LinkedIn - [Carolina Médici](https://www.linkedin.com/in/carolina-medici/)
+- Frontend Mentor - [@carolmedici](https://www.frontendmentor.io/profile/carolmedici)
+
+
+
+
